@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat RSA Berkelas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginContainer" class="login-container">
+    <div class="login-form">
+      <h2>Masuk ke Chat RSA</h2>
+      <input type="text" id="usernameInput" placeholder="Masukkan username..." autocomplete="off" />
+      <button id="loginBtn" class="btn-primary">Masuk</button>
+    </div>
+  </div>
+
+  <div id="mainContainer" class="container" style="display: none;">
+    <!-- Kolom Kiri: Fitur Perhitungan -->
+    <div class="left-panel">
+      <h2>Proses RSA</h2>
+
+      <button id="generateKeyBtn" class="btn-primary">Generate Key Pair</button>
+
+      <div id="keyDetails" class="box">
+        <h3>Key Pair</h3>
+        <pre id="keyOutput">Tekan tombol generate key untuk mulai</pre>
+      </div>
+    </div>
+
+    <!-- Kolom Kanan: Chat -->
+    <div class="right-panel">
+      <h2>Chat Real-time</h2>
+      <div id="chatBox" class="chat-box"></div>
+      <div class="input-group">
+        <input type="number" id="recipientE" placeholder="Recipient's e" />
+        <input type="number" id="recipientN" placeholder="Recipient's n" />
+      </div>
+      <div class="input-group">
+        <input type="text" id="chatInput" placeholder="Tulis pesan..." autocomplete="off" />
+        <button id="sendChatBtn" class="btn-primary">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
