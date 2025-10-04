@@ -8,6 +8,7 @@ ANGGOTA KELOMPOK:
 5. RIZAL MUHAIMIN
 
 cara menjalankan aplikasi
+
 1.Buka dua terminal.
 
 2.Terminal pertama jalankan server Node.js.
